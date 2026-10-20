@@ -1,0 +1,26 @@
+-- AULA: Tratando NULL com COALESCE
+-- TIPO: AULA
+-- O QUE FAZ: COALESCE(valor, substituto) retorna o valor se ele nao
+-- for nulo, ou o substituto caso contrario.
+
+-- Vendas sem vendedor (NULL): mostra 0 no lugar do vendedor
+SELECT	TOP 100
+		COALESCE (VENDEDOR, 0) AS VENDEDOR, 
+		PRODUTO, 
+		QUANTIDADE, 
+		ROUND (VENDA_BRUTA / QUANTIDADE,2) AS VALOR_UNITARIO, 
+		VENDA_BRUTA
+FROM VENDAS_ANALITICAS
+WHERE VENDEDOR IS NULL
+ORDER BY VALOR_UNITARIO DESC;
+
+-- Mesma consulta, mas so com vendas que TEM vendedor (para comparar)
+SELECT	TOP 100
+		VENDEDOR, 
+		PRODUTO, 
+		QUANTIDADE, 
+		ROUND (VENDA_BRUTA / QUANTIDADE,2) AS VALOR_UNITARIO, 
+		VENDA_BRUTA
+FROM VENDAS_ANALITICAS
+WHERE VENDEDOR IS NOT NULL
+ORDER BY VALOR_UNITARIO DESC;

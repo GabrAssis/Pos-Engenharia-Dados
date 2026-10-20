@@ -1,0 +1,28 @@
+-- AULA: Operadores de comparacao (<>, >, >=, <, <=, =, !=)
+-- TIPO: AULA
+-- O QUE FAZ: comparam uma coluna com um valor dentro do WHERE,
+-- para filtrar quais linhas aparecem no resultado.
+
+-- Traz vendas depois de 01/06/2020 (operador >)
+SELECT CONCAT	(ESPECIE_FISCAL, DOCUMENTO_NUMERO) AS DOCUMENTO, 
+				VENDEDOR, 
+				MOVIMENTO, 
+				PRODUTO, 
+				QUANTIDADE, 
+				VENDA_BRUTA / QUANTIDADE AS VALOR_UNITARIO, 
+				VENDA_BRUTA
+FROM VENDAS_ANALITICAS
+WHERE MOVIMENTO > '01/06/2020'
+ORDER BY MOVIMENTO;
+
+-- Traz apenas um produto especifico (operador =)
+SELECT CONCAT	(ESPECIE_FISCAL, DOCUMENTO_NUMERO) AS DOCUMENTO, 
+				VENDEDOR, 
+				MOVIMENTO, 
+				PRODUTO, 
+				QUANTIDADE, 
+				VENDA_BRUTA / QUANTIDADE AS VALOR_UNITARIO, 
+				VENDA_BRUTA
+FROM VENDAS_ANALITICAS
+WHERE PRODUTO = '34912'
+ORDER BY QUANTIDADE DESC;

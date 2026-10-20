@@ -1,0 +1,15 @@
+-- AULA: Desafio - agregacao + HAVING num caso real
+-- TIPO: DESAFIO
+-- O QUE FAZ: junta SUM e COUNT DISTINCT com HAVING para responder
+-- uma pergunta especifica: quais clientes compraram mais de 50
+-- produtos diferentes de um vendedor?
+
+SELECT	CLIENTE,
+		SUM (QUANTIDADE)			AS QUANTIDADE_TOTAL,
+		SUM (VENDA_LIQUIDA)			AS VENDA_LIQUIDA_TOTAL,
+		COUNT (DISTINCT PRODUTO)	AS ITENS_COMPRADOS
+FROM VENDAS_ANALITICAS
+WHERE VENDEDOR = 1
+GROUP BY CLIENTE
+HAVING COUNT (DISTINCT PRODUTO) > 50
+ORDER BY ITENS_COMPRADOS DESC;

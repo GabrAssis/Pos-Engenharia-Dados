@@ -1,0 +1,23 @@
+# Ignora pastas de cache geradas pelo Python
+__pycache__/
+
+# Ignora arquivos compilados .pyc e .pyo
+*.py[oc]
+
+# Ignora arquivos temporários de construção de pacotes
+build/
+
+# Ignora pacotes gerados para distribuição, como .whl e .tar.gz
+dist/
+
+# Ignora a pasta usada para armazenar pacotes .whl
+wheels/
+
+# Ignora pastas de metadados geradas pelo empacotamento
+*.egg-info/
+
+# Ignora o ambiente virtual e suas bibliotecas instaladas
+.venv/
+
+# Ignora variáveis de ambiente locais, que podem conter senhas e tokens
+.env

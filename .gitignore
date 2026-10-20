@@ -1,0 +1,22 @@
+# Credenciais e ambientes virtuais
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+env/
+**/.streamlit/secrets.toml
+
+# Arquivos gerados pelo Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Indices gerados pelos projetos de IA
+**/indice/
+
+# Arquivos do sistema
+Thumbs.db
+desktop.ini
+.DS_Store

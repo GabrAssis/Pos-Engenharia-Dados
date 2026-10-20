@@ -1,0 +1,14 @@
+-- TOPICO: Ordem logica de execucao de um SELECT
+-- TIPO: ANOTACAO DE AULA
+-- O QUE FAZ: o SQL Server nao le a consulta na ordem em que ela
+-- esta escrita. Por dentro, a ordem real e:
+--
+-- 1. FROM     -> escolhe a tabela
+-- 2. WHERE    -> filtra as linhas
+-- 3. GROUP BY -> agrupa o que sobrou
+-- 4. HAVING   -> filtra os grupos ja calculados
+-- 5. SELECT   -> so agora calcula as colunas
+-- 6. ORDER BY -> por ultimo, ordena o resultado
+--
+-- Isso explica por que o HAVING (e nao o WHERE) e usado para
+-- filtrar resultados de SUM, COUNT, AVG etc.
