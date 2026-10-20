@@ -6,8 +6,8 @@ Projetos de estudo que combinam coleta, tratamento e consulta de dados com recur
 
 | Projeto | O que explora | Documentação |
 | --- | --- | --- |
-| [Projeto Documentos](Projeto-Documentos/) | Perguntas e respostas sobre documentos com RAG: leitura, divisão em trechos, embeddings, busca por similaridade e geração de respostas com fontes. | [README](Projeto-Documentos/README.md) |
-| [Projeto Livraria](Projeto-Livraria/) | Coleta de livros por scraping, organização em camadas bronze, prata e ouro no PostgreSQL e consulta em português por um agente que gera SQL. | [README](Projeto-Livraria/README.md) |
+| [Projeto Documentos](Projeto-Documentos-IA/) | Perguntas e respostas sobre documentos com RAG: leitura, divisão em trechos, embeddings, busca por similaridade e geração de respostas com fontes. | [README](Projeto-Documentos-IA/README.md) |
+| [Projeto Livraria](Projeto-Livraria-IA/) | Coleta de livros por scraping, organização em camadas bronze, prata e ouro no PostgreSQL e consulta em português por um agente que gera SQL. | [README](Projeto-Livraria-IA/README.md) |
 
 ## Tecnologias presentes
 
