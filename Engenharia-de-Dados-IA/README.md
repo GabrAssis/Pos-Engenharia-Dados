@@ -1,30 +1,27 @@
 # Engenharia de Dados com IA
 
-Projetos de estudo que combinam coleta, tratamento e consulta de dados com recursos de inteligência artificial.
+**Projetos aplicados de coleta, transformação e consulta de dados com inteligência artificial.**
+
+Esta trilha reúne aplicações desenvolvidas durante a pós, conectando fundamentos de engenharia de dados a interfaces de consulta em linguagem natural.
 
 ## Projetos
 
-| Projeto | O que explora | Documentação |
+| Projeto | Problema explorado | Entrega |
 | --- | --- | --- |
-| [Projeto Documentos](Projeto-Documentos-IA/) | Perguntas e respostas sobre documentos com RAG: leitura, divisão em trechos, embeddings, busca por similaridade e geração de respostas com fontes. | [README](Projeto-Documentos-IA/README.md) |
-| [Projeto Livraria](Projeto-Livraria-IA/) | Coleta de livros por scraping, organização em camadas bronze, prata e ouro no PostgreSQL e consulta em português por um agente que gera SQL. | [README](Projeto-Livraria-IA/README.md) |
+| [Livraria Inteligente](Projeto-Livraria-IA/) | Como transformar um catálogo em uma base para análise? | Scraping, PostgreSQL, camadas de dados, métricas em SQL e interface de consulta. |
+| [Assistente de Documentos com IA](Projeto-Documentos-IA/) | Como facilitar a consulta a políticas e procedimentos? | Processamento de documentos, embeddings locais, busca semântica e respostas com fontes recuperadas. |
 
-## Tecnologias presentes
+## Competências trabalhadas
 
-- **Python:** scripts de coleta, processamento e integração.
-- **SQL e PostgreSQL/Supabase:** armazenamento e transformação no projeto da livraria.
-- **Streamlit:** interfaces para interagir com os projetos.
-- **Modelos de linguagem:** geração de respostas e consultas.
-- **Embeddings:** representação dos textos para a busca no projeto de documentos.
+- Coleta e processamento de dados com Python.
+- Transformação e agregação em SQL.
+- Definição de regras de negócio e dicionário de dados.
+- Integração com APIs de modelos de linguagem.
+- Construção de interfaces com Streamlit.
+- Documentação da arquitetura e da execução.
 
-## Como executar
+## Explorar os projetos
 
-Cada projeto tem suas próprias dependências, variáveis de ambiente e instruções de execução. Entre na pasta desejada e siga o respectivo README.
-
-## Como registrar a evolução
-
-Mantenha a documentação de execução junto de cada projeto. Ao alterar o funcionamento, registre também o objetivo da mudança, as configurações necessárias e as limitações encontradas.
-
-Credenciais devem ficar no ambiente local, em arquivos ignorados pelo Git. Arquivos de exemplo devem conter apenas valores fictícios.
+Cada projeto apresenta suas entregas no README e reúne a preparação do ambiente no respectivo guia de execução.
 
 [Voltar ao início](../README.md)
