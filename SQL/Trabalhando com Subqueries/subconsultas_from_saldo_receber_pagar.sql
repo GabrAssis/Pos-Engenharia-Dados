@@ -1,0 +1,31 @@
+
+
+
+-- SUBSELECT V2
+
+
+SELECT          A.ENTIDADE,
+                A.NOME,
+                ISNULL (B.VALOR_RECEBER,0) AS VALOR_RECEBER,
+                ISNULL (C.VALOR_PAGAR, 0) AS VALOR_PAGAR,
+                ISNULL (B.VALOR_RECEBER,0) -  ISNULL (C.VALOR_PAGAR, 0)  AS SALDO
+    FROM        ENTIDADES A
+    
+    LEFT JOIN (
+        
+        SELECT	
+                ENTIDADE, 
+                SUM(VALOR) AS VALOR_RECEBER
+        FROM TITULOS_RECEBER
+        GROUP BY ENTIDADE ) B ON A.ENTIDADE = B.ENTIDADE
+
+    LEFT JOIN (
+       
+       SELECT		
+                ENTIDADE,
+                SUM(VALOR) AS VALOR_PAGAR
+        FROM TITULOS_PAGAR
+        GROUP BY ENTIDADE ) C ON A.ENTIDADE = C.ENTIDADE
+    
+    WHERE   B.VALOR_RECEBER IS NOT NULL
+        OR  C.VALOR_PAGAR IS NOT NULL
